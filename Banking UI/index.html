@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="index.css">
+
+
+    <title>Register Form</title>
+</head>
+<body>
+    <div class="container">
+         
+        <div class="heading">Registeration</div>
+    <hr>
+        <form action="#" >
+
+            <!-- this is for take details -->
+           <div class="card-details">
+            <div class="card-box">
+
+                <span class="details">Full Name</span>
+                <input type="text" placeholder="Enter Your Name" id="name">
+            </div>
+            <div class="card-box">
+
+                <span class="details">User Name</span>
+                <input type="text" placeholder="Enter Your Email" id="username">
+            </div>
+            <div class="card-box">
+
+                <span class="details">Email Name</span>
+                <input type="text" placeholder="Enter Your Email" id="email">
+            </div>
+            <div class="card-box">
+
+                <span class="details">Phone Number</span>
+                <input type="text" placeholder="Enter Your Number" id="number">
+            </div>
+            <div class="card-box">
+
+                <span class="details">Password</span>
+                <input type="text" placeholder="Enter Password" id="password">
+            </div>
+            <div class="card-box">
+
+                <span class="details">Confirm Password</span>
+                <input type="text" placeholder="Re-Enter Password" id="cpassword">
+            </div>
+           </div>
+            <!-- this is for take details end-->
+
+            <!-- radio button starts -->
+            <div class="circal-from">
+               <span class="circal-title">Gender</span>
+               <div class="category">
+                <input type="radio" style="width:50px" name="gender">Male
+                <input type="radio" style="width:50px" name="gender">Female
+                <input type="radio" style="width:50px" name="gender">Other
+               </div>
+            </div>
+                        <!-- radio button ends -->
+     
+               <div class="button">
+                <input type="button" value="Register" onclick="signup()">
+               </div>         
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

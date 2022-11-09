@@ -1,0 +1,152 @@
+<html>
+<head>
+<title>courses</title>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<style>
+body{
+background-color:aqua;
+background-size:cover;
+background-repeat:no-repeat;
+}
+.main{
+width:30%;
+margin-left:35%;
+height:510px;
+margin-top:50px;
+background-color:#800000;
+padding:10px;
+border-radius:20px;
+opacity:0.6;
+border:2px solid aqua;
+}
+table{
+width:100%;
+box-sizing:border:box;
+padding:10px;
+}
+.name,.address,.email,.about,.mobile,.grade,.per,.source,.destination,.age{
+width:100%;
+height:35px;
+outline:none;
+border:none;
+}
+.input{
+background-color:green;
+color:white;
+width:150px;
+height:35px;
+outline:none;
+border:none;
+}
+td{
+font-weight:bold;
+color:white;
+margin-top:10px;
+}
+h3{
+text-align:center;
+color:white;
+padding:0;
+margin:0;
+}
+.input:hover{
+background-color:blue;
+color:white;
+width:120px;
+height:35px;
+outline:none;
+cursor:pointer;
+transition:1s;
+}
+</style>
+</head>
+<body>
+
+<div class="main">
+<h3>HOME LOAN APPLICATION FORM</h3>
+<form>
+<table>
+<tr>
+<td>FULL NAME:</td>
+<td><input type="text" name="name" id="fname" class="name"></td>
+</tr>
+
+<tr>
+<td>ADDRESS:</td>
+<td><input type="text" name="address" id="address" class="address"></td>
+</tr>
+
+
+<tr>
+<td>EMAIL ID:</td>
+<td><input type="text" name="email" id="email" class="email"></td>
+</tr>
+
+<tr>
+<td>MOBILE NUMBER:</td>
+<td><input type="text" name="mobile" id="mobile" class="mobile"></td>
+</tr>
+
+
+<tr>
+<td>ENTER ADHAR NUMBER:</td>
+<td><input type="text" name="grade" id="adhar" class="destination"></td>
+</tr>
+<tr>
+<td>ENTER PAN CARD NUMBER:</td>
+<td><input type="text" name="grade" id="pan" class="destination"></td>
+</tr>
+
+<tr>
+<td>YOUR AGE:</td>
+<td><input type="text" name="about" id="age" class="age"></td>
+</tr>
+
+<tr>
+<td>GENDER</td>
+<td><input type="radio" class="radio" name="male"/> Male   
+<input type="radio" class="radio" name="female"/> Female   
+<input type="radio" class="radio" name="other"/> Other  </td>
+</tr>
+
+<tr>
+<td>SELECT LOANTYPE</td>
+<td>
+<select style="width:100%;height:30px;" name="select" id="loantype">  
+<option value="home loan">HOME LOAN</option>     
+</select>
+ </td>
+</tr>	
+
+
+<tr><td></td><td>
+<input type="submit" class="input" value="REGISTER" onclick="abc()">
+</td></tr>
+</table>
+</form>
+</div>
+
+
+<script>
+function abc(){
+var fname=document.getElementById("fname").value;
+var address=document.getElementById("address").value;
+var email=document.getElementById("email").value;
+var mobile=document.getElementById("mobile").value;
+var adhar=document.getElementById("adhar").value;
+var pan=document.getElementById("pan").value;
+var loantype=document.getElementById("loantype").value;
+
+  localStorage.setItem('loanname', fname);
+    localStorage.setItem('loanaddress', address);
+	  localStorage.setItem('loanemail', email);
+	    localStorage.setItem('loanmobile', mobile);
+		   localStorage.setItem('loanadhar', adhar);
+	    localStorage.setItem('loanpan', pan);
+		  localStorage.setItem('loantype', loantype);
+			window.open('banksuccess.html');
+}
+</script>
+
+</body>
+</html>

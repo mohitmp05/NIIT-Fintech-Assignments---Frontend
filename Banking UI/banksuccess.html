@@ -1,0 +1,152 @@
+<html>
+<head>
+<title>courses</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<style>
+body{
+background-color:#800000;
+}
+.main{
+width:100%;
+padding:30px;
+background-color:#ccc;
+text-align:center;
+margin-top:20px;
+display:none;
+}
+.butt{
+margin-left:150px;
+outline:none;
+border:none;
+margin-top:20px;
+}
+a{
+text-decoration.none;
+color:white;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+
+<div class="col-md-3"></div>
+<div class="col-md-6">
+<button class="btn btn-primary mt-3 butt">Click Here To Show THE LOAN DETAILS</button>
+<div class="main">
+
+
+
+  <table class="table table-striped">
+    <tbody>
+	   <tr>
+        <td>FULL NAME</td>
+        <td><p id="name"></p></td>
+      </tr>
+	     <tr>
+        <td>ADDRESS</td>
+        <td><p id="address"></p></td>
+      </tr>
+	     <tr>
+        <td>EMAIL</td>
+        <td><p id="email"></p></td>
+      </tr>
+	     <tr>
+        <td>MOBILE</td>
+        <td><p id="mobile"></p></td>
+      </tr>
+	     <tr>
+        <td>Amount</td>
+        <td><p id="amount"></p></td>
+      </tr>
+      <tr>
+        <td>ADHAR NUMBER</td>
+        <td><p id="adhar"></p></td>
+      </tr>
+      <tr>
+        <td>PAN NUMBER</td>
+        <td><p id="pan"></p></td>
+      </tr>
+      <tr>
+        <td>LOAN TYPE</td>
+        <td><p id="loantype"></p></td>
+      </tr>
+	    <tr>
+        <td>LOAN TENURE</td>
+        <td><p id="tenure"></p></td>
+      </tr>
+	     <tr>
+        <td>LOAN EMI</td>
+        <td><p id="emi"></p></td>
+      </tr>
+	  
+    </tbody>
+  </table>
+
+
+
+<button class="btn btn-primary mt-3 butt"><a href="homeloan.html">BACK TO HOME</a></button>
+</div>
+</div>
+<div class="col-md-3"></div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+$(".butt").click(function(){
+$(".main").fadeIn(2000);
+});
+    
+	
+	var lname=  localStorage.getItem('loanname');
+    var laddress=localStorage.getItem('loanaddress');
+	  var lemail=localStorage.getItem('loanemail');
+	   var lmobile= localStorage.getItem('loanmobile');
+		 var lamount= localStorage.getItem('bamount');
+		   var ladhar=localStorage.getItem('loanadhar');
+	    var lpan=localStorage.getItem('loanpan');
+		  var lloantype=localStorage.getItem('loantype');
+		   var ltenure=localStorage.getItem('btenure');
+	       var lemi=localStorage.getItem('bemi');
+	
+
+  var name=document.getElementById("name");
+var email=document.getElementById("email");
+var address=document.getElementById("address");
+var mobile=document.getElementById("mobile");
+  var amount=document.getElementById("amount");
+var adhar=document.getElementById("adhar");
+var pan=document.getElementById("pan");
+var loantype=document.getElementById("loantype");
+var tenure=document.getElementById("tenure");
+var emi=document.getElementById("emi");
+
+
+
+name.innerHTML=lname;
+email.innerHTML=lemail;
+address.innerHTML=laddress;
+mobile.innerHTML=lmobile;
+
+amount.innerHTML=lamount;
+adhar.innerHTML=ladhar;
+pan.innerHTML=lpan;
+loantype.innerHTML=lloantype;
+tenure.innerHTML=ltenure;
+emi.innerHTML=lemi;
+
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="style1.css">
+  <script type="text/javascript" src="script.js"></script>
+  <title>Order Now</title>
+</head>
+<body>
+  <header>
+        <div class="container">
+            <nav>
+                <!-- <h1 class="brand"><a href="home.html"><span>Swiggy</span></a></h1> -->
+                <a href="index.html"><img src="img/logo.png" class="logo"></a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="order.html">Order Now</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="form.html">Sign UP</a></li>
+                </ul>
+            </nav>
+        </div>
+        </header>
+
+        <div class="wrapper">
+          <h2>Order Now</h2>
+          <div class="form-container">
+            <form>
+              <div class="input-name">
+                <label for="item">Menu:</label>
+                <select class="country" id="order">
+                  <option>Choose a Dish</option>
+                  <option value="Chole Bhatoore">Chole Batoore- ₹80</option>
+                  <option value="Masala Dosa">Masala Dosa- ₹110</option>
+                  <option value="Aloo Tikki">Aloo Tikki- ₹50</option>
+                  <option value="Veg Burger">Veg Burger- ₹70</option>
+                  <option value="Veg Loaded Pizza">Veg Loaded Pizza- ₹150</option>
+                </select>
+              </div>
+
+              <div class="input-name">
+                <label for="size">Size:</label>
+                <select class="country">
+                  <option>Choose Size</option>
+                  <option value="Quarter">Quarter</option>
+                  <option value="Half">Half</option>
+                  <option value="Full">Full</option>
+                </select>
+              </div>
+
+              <div class="input-name">
+                <label for="quantity">Quantity:</label>
+                <select class="country">
+                  <option>Choose Quantity</option>
+                  <option value="Quarter">1</option>
+                  <option value="Half">2</option>
+                  <option value="Full">3</option>
+                </select>
+              </div>
+        
+              <div class="input-name">
+                <input type="submit" class="button" value="Place Order" onclick="sample()">
+              </div>
+        
+            </form>
+          </div>
+         </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>courses</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<style>
+body{
+background-color:#800000;
+}
+.main{
+width:100%;
+padding:30px;
+background-color:#ccc;
+text-align:center;
+margin-top:20px;
+display:none;
+}
+.butt{
+margin-left:150px;
+outline:none;
+border:none;
+margin-top:20px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+
+<div class="col-md-3"></div>
+<div class="col-md-6">
+<button class="btn btn-primary mt-3 butt">Click Here To Show Profile</button>
+<div class="main">
+<table>
+
+<tr>
+<td><p>FULL NAME</p></td>
+<td>&nbsp&nbsp&nbsp&nbsp</td>
+<td></td>
+<td><p id="name"></p></td>
+</tr>
+
+<tr>
+<td><p>EMAIL ID</p></td>
+<td></td>
+<td></td>
+<td><p id="email"></p></td>
+</tr>
+
+<tr>
+<td><p>ADDRESS</p></td>
+<td></td>
+<td></td>
+<td><p id="address"></p></td>
+</tr>
+
+<tr>
+<td><p>MOBILE</p></td>
+<td></td>
+<td></td>
+<td><p id="mobile"></p></td>
+</tr>
+
+<tr>
+<td><p>PASSWORD</p></td>
+<td></td>
+<td></td>
+<td><p id="password"></p></td>
+</tr>
+
+
+</table>
+</div>
+</div>
+<div class="col-md-3"></div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+$(".butt").click(function(){
+$(".main").fadeIn(2000);
+});
+  var lemail=localStorage.getItem('email');
+  var lpassword=localStorage.getItem('password');
+    var lmobile=localStorage.getItem('mobile');
+  var laddress=localStorage.getItem('address');
+    var lname=localStorage.getItem('fullname');
+
+  
+  
+var name=document.getElementById("name");
+var email=document.getElementById("email");
+var address=document.getElementById("address");
+var mobile=document.getElementById("mobile");
+var password=document.getElementById("password");
+
+name.innerHTML=lname;
+email.innerHTML=lemail;
+password.innerHTML=lpassword;
+address.innerHTML=laddress;
+mobile.innerHTML=lmobile;
+});
+
+</script>
+</body>
+</html>

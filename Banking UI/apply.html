@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>courses</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+body{
+background-color:aqua;
+}
+.main{
+width:30%;
+height:350px;
+margin-left:35%;
+background-color:#ccc;
+margin-top:20px;
+padding-left:80px;
+padding-right:20px;
+padding-top:20px;
+box-sizing:border-box;
+border-radius:20px;
+}
+input,select,button{
+width:250px;
+height:30px;
+outline:none;
+border:none;
+margin-top:10px;
+}
+button{
+background-color:green;
+color:white;
+}
+#status{
+width:40%;
+height:300px;
+background-color:#ccc;
+margin-left:30%;
+margin-top:20px;
+padding:50px;
+box-sizing:border-box;
+
+}
+button{
+width:100px;
+height:30px;
+background-color:green;
+color:white;
+margin-left:150px;
+}
+</style>
+</head>
+<body bgcolor="aqua">
+<div class="main">
+<form>
+<input type="number" id="num1" placeholder="enter the amount">
+<br>
+<input type="number" id="num2" placeholder="enter the tenure">
+<select name="select" id="stat">
+<option value="select">SELECT YOUR PROFESSION</option>
+<option value="add">BUSINESS MAN</option>
+<option value="sub">SALARIED</option>
+</select>
+<br>
+<input type="number" id="salary" placeholder="enter your salary">
+<br>
+<input type="number" id="working" placeholder="enter the working period">
+<br>
+<input type="number" id="age" placeholder="enter your age">
+<br>
+<button id="check">Check</button>
+</form>
+</div>
+
+
+<div class="status" id="status">
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td>Amount</td>
+        <td><p id="amount"></p></td>
+      </tr>
+      <tr>
+        <td>Tenure</td>
+        <td><p id="tenure"></p></td>
+      </tr>
+      <tr>
+        <td>Emi</td>
+        <td><p id="emi"></p></td>
+      </tr>
+    </tbody>
+  </table>
+  <button onclick="applynow()">APPLY NOW</button>
+</div>
+
+
+<script>
+$(document).ready(function(){
+var emii=localStorage.getItem("bemi");
+var bamount=localStorage.getItem("bamount");
+var btenure=localStorage.getItem("btenure");
+var amount=document.getElementById("amount");
+var tenure=document.getElementById("tenure");
+var emi=document.getElementById("emi");
+amount.innerHTML=bamount;
+tenure.innerHTML=btenure;
+emi.innerHTML=emii;
+})
+
+
+$("#check").click(function(){
+var numbero=parseInt(document.getElementById("num1").value);
+var numbert=parseInt(document.getElementById("num2").value);
+var status=document.getElementById("stat").value;
+var amount=document.getElementById("amount");
+
+var age=parseInt(document.getElementById("age").value);
+var salary=document.getElementById("salary").value;
+var working=parseInt(document.getElementById("working").value);
+
+switch(status) {
+  case "add":{
+         var final=(numbero*10)/100;
+		 //if(salary<(number0*10)/100)
+		 //numbero>=500000 && salary <=40000
+		 if(salary<final){
+		 alert("since your salary is "+salary+" you are only applicable for upto"+final);
+		 }
+		 else{
+		     if(working >= 6){
+			            if(age+numbert >= 60){
+						  alert("yor are not eligible for this time period");
+						}
+						else{
+						      var roi=8;
+         roi=(numbero*roi)/100;
+		 roi=numbero+roi;
+		 roi=roi/(numbert*12);
+		 localStorage.setItem("bemi",roi);
+		 localStorage.setItem("bamount",numbero);
+		 localStorage.setItem("btenure",numbert);
+          amount.innerHTML=numbero;
+						}
+			 }
+			 else{
+			 alert("you have to work minimum 6 month in a company!so please wait");
+			 }
+		 }
+  /*
+       var roi=8;
+         roi=(numbero*roi)/100;
+		 roi=numbero+roi;
+		 roi=roi/(numbert*12);
+		 localStorage.setItem("bemi",roi);
+		 localStorage.setItem("bamount",numbero);
+		 localStorage.setItem("btenure",numbert);
+          amount.innerHTML=numbero;
+		  
+		  */
+		  
+    break;}
+	
+  case "sub":{
+             var roi=8;
+            roi=(numbero*roi)/100;
+		 roi=numbero+roi;
+		 roi=roi/(numbert*12);
+		 localStorage.setItem("bemi",roi);
+		 localStorage.setItem("bamount",numbero);
+		 localStorage.setItem("btenure",numbert);
+          
+    break;}
+	
+  default:
+    // code block
+}
+})
+
+/*
+function check(){
+var numbero=parseInt(document.getElementById("num1").value);
+var numbert=parseInt(document.getElementById("num2").value);
+var status=document.getElementById("stat").value;
+var amount=document.getElementById("amount");
+
+switch(status) {
+  case "add":{
+       var roi=8;
+         roi=(numbero*roi)/100;
+		 roi=numbero+roi;
+		 roi=roi/(numbert*12);
+		 localStorage.setItem("bemi",roi);
+		 localStorage.setItem("bamount",numbero);
+		 localStorage.setItem("btenure",numbert);
+          amount.innerHTML=numbero;
+    break;}
+	
+  case "sub":{
+             var roi=8;
+            roi=(numbero*roi)/100;
+		 roi=numbero+roi;
+		 roi=roi/(numbert*12);
+		 localStorage.setItem("bemi",roi);
+		 localStorage.setItem("bamount",numbero);
+		 localStorage.setItem("btenure",numbert);
+          
+    break;}
+	
+  default:
+    // code block
+}
+}
+*/
+function applynow(){
+window.open('applyform.html');
+}
+
+</script>
+</body>
+</html>
